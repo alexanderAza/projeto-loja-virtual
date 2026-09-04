@@ -20,5 +20,7 @@ programa {
     inteiro qtd_carrinho_prod1 = 0
     inteiro qtd_carrinho_prod2 = 0
 
+    // colar a segunda parte aqui
+
   }
 }
