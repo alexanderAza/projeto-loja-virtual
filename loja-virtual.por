@@ -37,7 +37,7 @@ programa {
       escreva ("---------------------------------------")
 
       escreva ("=== MENU PRINCIPAL ===")
-    //}
+    
       escreva("1. Ver produtos e adicionar ao carrinho (CREATE)")
 
       escreva("2. ver Meus Itens no carrinho (READ)")
@@ -50,17 +50,20 @@ programa {
       escreva("Escolha uma opção: ")
       leia(opcao_menu_principal)
 
-        escreva(opcao_menu_principal)
-        //{
+      escreva(opcao_menu_principal)
+      {
             // =======================================================
             // C - CREATE (Adicionar Itens oa Carrinho)
             // =======================================================
         caso 1:
           limpa()
           escreva("---CATALOGO DE PRODUTOS---")
-          escreva("1 camisa esportiva(estoque:", estoque_prod1 ") -R$ ", preco_")
-          escreva("2 bone casual         (estoque: ", estoque_prod2, ") -R$ ", preco_")
-          escreva("3 tenis de corrida (estoque: ", estoque_prod3, ") -R$ ", preco_")
+          escreva("1 camisa esportiva(estoque:", estoque_prod1 ") -R$ ", preco_prod1)
+
+          escreva("2 bone casual         (estoque: ", estoque_prod2, ") -R$ ", preco_prod2)
+
+          escreva("3 tenis de corrida (estoque: ", estoque_prod3, ") -R$ ", preco_prod3)
+
           escreva("escolha o produto que deseja adicionar:")
           leia(opcao_crud)
 
@@ -70,9 +73,13 @@ programa {
 
 
           se (opcao_crud == 1){
+
             se (quantidade_temp > 0 e quantidade_temp <= estoque_prod1){
+
               qtd_carrinh_prod1 = qtd_carrinh_prod1 + quantidade_temp
+
               estoque_prod1 = estoque_prod1 - quantidade_temp
+              
               escreva("Item adicionado ao carrinho com sucesso!")
 
             }senao{
