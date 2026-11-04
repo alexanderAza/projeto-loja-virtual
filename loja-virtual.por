@@ -16,9 +16,9 @@ programa {
 
 
    // Variavel do CARRINHO DE COMPRAS (Qtds dos Itens)
-   inteiro qtd_carrinho_prod1 = 0
-   inteiro qtd_carrinho_prod2 = 0
-   inteiro qtd_carrinho_prod3 = 0
+   inteiro qtd_carrinho_prod1 = 0, qtd_carrinh_prod1
+   inteiro qtd_carrinho_prod2 = 0, qtd_carrinh_prod2
+   inteiro qtd_carrinho_prod3 = 0, qtd_carrinh_prod3
 
     // Variáveis auxiliares para operações
     inteiro quantidade_temp = 0
@@ -76,19 +76,19 @@ programa {
 
             se (quantidade_temp > 0 e quantidade_temp <= estoque_prod1){
 
-              qtd_carrinh_prod1 = qtd_carrinh_prod1 + quantidade_temp
+              qtd_carrinho_prod1 = qtd_carrinho_prod1 + quantidade_temp
 
               estoque_prod1 = estoque_prod1 - quantidade_temp
 
               escreva("Item adicionado ao carrinho com sucesso!")
 
             }senao{
-            escreva("Quantidade invalida ou estoque insuficiente!")
+            escreva("Quantidade invalida https://github.com/alexanderAza/projeto-loja-virtual.gitou estoque insuficiente!")
             }
             
           }senao se (opcao_crud == 2){
               se (quantidade_temp > 0 e quantidade_temp <= estoque_prod2) {
-                  qtd_carrinh_prod2 = qtd_carrinh_prod2 + quantidade_temp
+                  qtd_carrinho_prod2 = qtd_carrinho_prod2 + quantidade_temp
                   estoque_prod2 = estoque_prod2 - quantidade_temp
                   escreva("Item adicionado ao carrinho com sucesso!")
 
@@ -118,22 +118,22 @@ programa {
         caso 2:
           limpa()
           escreva("--- MEU CARRINHO DE COMPRAS ---")
-          se (qtd_carrinh_prod1 == 0 e qtd_carrinh_prod2 == 0 e qtd_carrinh_prod1)
+          se (qtd_carrinho_prod1 == 0 e qtd_carrinho_prod2 == 0 e qtd_carrinho_prod1)
         {
               escreva("seu carrinho esta vazio.")
         
         }senao
         }
-          se (qtd_carrinh_prod1 > 0) {
-              escreva("- ", qtd_carrinh_prod1, "x Camisa Esportiva (R$ ", (qtd_carrinh_prod1))
+          se (qtd_carrinho_prod1 > 0) {
+              escreva("- ", qtd_carrinho_prod1, "x Camisa Esportiva (R$ ", (qtd_carrinho_prod1))
 
         }
-        se (qtd_carrinh_prod2 > 0) {
-            escreva("- ", qtd_carrinh_prod2, "x Bone casual (R$ ", (qtd_carrinh_prod2))
+        se (qtd_carrinho_prod2 > 0) {
+            escreva("- ", qtd_carrinho_prod2, "x Bone casual (R$ ", (qtd_carrinho_prod2))
 
         }
-        se (qtd_carrinh_prod3 > 0) {
-            escreva("- ", qtd_carrinh_prod3, "x tênis de corrida (R$ ", (qtd_carrinh_prod3))
+        se (qtd_carrinho_prod3 > 0) {
+            escreva("- ", qtd_carrinho_prod3, "x tênis de corrida (R$ ", (qtd_carrinho_prod3))
 
         }
         {  
@@ -304,12 +304,12 @@ programa {
         escreva("========================================")
         escreva("Itens comprados:")
 
-        se (qtd_carrinh_prod1 > 0) {
-          escreva("- ", qtd_carrinh_prod1, "x Camisa Esportiva = R$ ", (qtd_carrinh_prod1))
+        se (qtd_carrinho_prod1 > 0) {
+          escreva("- ", qtd_carrinho_prod1, "x Camisa Esportiva = R$ ", (qtd_carrinho_prod1))
 
           }
       se (qtd_carrinho_prod2 > 0) {
-        escreva("-", qtd_carrinho_prod3, "x Tenis de corrida = R$ ", (qtd_carrinho_prod3)")
+        escreva("-", qtd_carrinho_prod3, "x Tenis de corrida = R$ ", (qtd_carrinho_prod3))
             }
 
             escreva("--------------------------------------")
