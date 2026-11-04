@@ -316,7 +316,7 @@ programa {
 
             escreva(" valor total bruto: R$ ", valor_total_bruto," ")
 
-            escreva("Desconto aplicado: R$ ", valor_desconto,"")
+            escreva("Desconto aplicado: R$ ", valor_desconto," ")
 
             escreva("valor final a pagar: R$ ", valor_final, " ")
 
