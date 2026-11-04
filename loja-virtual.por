@@ -79,7 +79,7 @@ programa {
               qtd_carrinh_prod1 = qtd_carrinh_prod1 + quantidade_temp
 
               estoque_prod1 = estoque_prod1 - quantidade_temp
-              
+
               escreva("Item adicionado ao carrinho com sucesso!")
 
             }senao{
@@ -316,7 +316,7 @@ programa {
 
             escreva(" valor total bruto: R$ ", valor_total_bruto," ")
 
-            escreva("Desconto aplicado: R$ ", valor_deconto,"")
+            escreva("Desconto aplicado: R$ ", valor_desconto,"")
 
             escreva("valor final a pagar: R$ ", valor_final, " ")
 
