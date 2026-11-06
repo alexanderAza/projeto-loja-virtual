@@ -56,6 +56,7 @@ programa {
             // =======================================================
             // C - CREATE (Adicionar Itens oa Carrinho)
             // =======================================================
+            
         caso 1:
           limpa()
           escreva("---CATALOGO DE PRODUTOS---")
@@ -202,19 +203,17 @@ programa {
                   escreva("Digite NOVA quantidade total para este item: ")
                   leia(quantidade_temp)
 
-                  se (quantidade_temp >= 0 e quantidade_temp <= estoque_prod3)  {
+                  se (quantidade_temp >= 0 e quantidade_temp <= estoque_prod3){
                       qtd_carrinho_prod3 = quantidade_temp
                       estoque_prod3 = quantidade_temp
-                      escreva("Quantidade atualizada com sucesso!")}
-                      senao{
-                        estoque_prod3 = estoque_prod3 - qtd_carrinho_prod3
-                        escreva("quantidade invalida ou acima do estoque disponivel!")
+                      escreva("Quantidade atualizada com sucesso!")
+                  }senao{
+                    estoque_prod3 = estoque_prod3 - qtd_carrinho_prod3
+                    escreva("quantidade invalida ou acima do estoque disponivel!")
 
-                      }
+                  }
 
-                }
-
-                senao{
+                }senao{
                   escreva("opção invalida!")
 
                 }
@@ -268,10 +267,10 @@ programa {
           limpa()
           escreva("Opção inválida! Escolha uma das opções do menu.")
           escreva("Pressione ENTER para continuar...")
-                leia (tecla_pausa)
+          leia (tecla_pausa)
         pare
-        }
-        }
+        //}
+        //}
 
           // CALCULAR VALOR TOTAL DO CARRINHO
           valor_total_bruto = (qtd_carrinho_prod1 * preco_prod1) +
@@ -318,8 +317,7 @@ programa {
               }
             se (qtd_carrinho_prod2 > 0) {
               escreva("-", qtd_carrinho_prod3, "x Tenis de corrida = R$ ", (qtd_carrinho_prod3))
-                  }
-
+            }
                 escreva("--------------------------------------")
 
                 escreva(" valor total bruto: R$ ", valor_total_bruto," ")
@@ -331,8 +329,8 @@ programa {
                 escreva("=======================================")
 
                 escreva(" Obrigado por comprar conosco!")
-            }
-            senao{
+
+            }senao{
               escreva("Carrinho vazio. Compra cancelada.")
 
             }
