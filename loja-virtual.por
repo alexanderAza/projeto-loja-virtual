@@ -205,12 +205,12 @@ programa {
                   se (quantidade_temp >= 0 e quantidade_temp <= estoque_prod3)  {
                       qtd_carrinho_prod3 = quantidade_temp
                       estoque_prod3 = quantidade_temp
-                      escreva("Quantidade atualizada com sucesso!")
-                  } senao {
-                    estoque_prod3 = estoque_prod3 - qtd_carrinho_prod3
-                    escreva("quantidade invalida ou acima do estoque disponivel!")
+                      escreva("Quantidade atualizada com sucesso!")}
+                      senao{
+                        estoque_prod3 = estoque_prod3 - qtd_carrinho_prod3
+                        escreva("quantidade invalida ou acima do estoque disponivel!")
 
-                  }
+                      }
 
                 }
 
@@ -242,34 +242,34 @@ programa {
                   qtd_carrinho_prod1 = 0
                   escreva("Camisa Esportiva removida do carrinho!")
               }senao se (opcao_crud == 2) {
-        estoque_prod2 = estoque_prod2 + qtd_carrinho_prod2
-        qtd_carrinho_prod2 = 0
-        escreva("Boné Casual removido do carrinho!")
+              estoque_prod2 = estoque_prod2 + qtd_carrinho_prod2
+              qtd_carrinho_prod2 = 0
+              escreva("Boné Casual removido do carrinho!")
 
-      }
-      senao se (opcao_crud == 3) {
-        estoque_prod3 = estoque_prod3 + qtd_carrinho_prod3
-        qtd_carrinho_prod3 = 0 
-        escreva("Tenis de Corrida removido do carrinho!")
-        }
-        senao {
-          escreva("Opção invalida!")
-          }
-          escreva("Pressione ENTER para voltar ao menu...")
-          leia(tecla_pausa)
-          pare
-
-      caso 0:
+            }
+            senao se (opcao_crud == 3) {
+              estoque_prod3 = estoque_prod3 + qtd_carrinho_prod3
+              qtd_carrinho_prod3 = 0 
+              escreva("Tenis de Corrida removido do carrinho!")
+              }
+              senao {
+                escreva("Opção invalida!")
+                }
+                escreva("Pressione ENTER para voltar ao menu...")
+                leia(tecla_pausa)
+        pare
+          
+        caso 0:
           limpa()
           escreva("Encerrando seleção de itens e indo para o pagamento...")
           pare
 
-      caso contrario:
+        caso contrario:
           limpa()
           escreva("Opção inválida! Escolha uma das opções do menu.")
           escreva("Pressione ENTER para continuar...")
                 leia (tecla_pausa)
-            pare
+        pare
         }
         }
 
